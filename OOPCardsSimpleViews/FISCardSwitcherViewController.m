@@ -15,6 +15,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.middleLabel.font = [UIFont boldSystemFontOfSize:40];
+    
+    self.middleLabel.textAlignment = NSTextAlignmentCenter;
+    
     // Do any additional setup after loading the view.
     self.threeOfSpades = [[FISCard alloc] initWithSuit:@"♠️"
                                                   rank:@"3"];
@@ -25,6 +30,7 @@
     self.tenOfHearts = [[FISCard alloc] initWithSuit:@"♥️"
                                                 rank:@"10"];
 }
+   // MARK: actions
 
 - (IBAction)threeOfSpadesButton:(id)sender {
     
@@ -61,6 +67,22 @@
     
     self.bottomLabel.text = self.tenOfHearts.cardLabel;
 }
-
+//- (IBAction)threeOfSpades:(id)sender {
+//    [self setLabelsForCard: = self.threeOfSpades];
+//}
+//- (IBAction)fourOfClubs:(id)sender {
+//    [self setLabelsForCard: = self.fourOfClubs];
+//}
+//- (IBAction)eightOfDiamondsButton:(id)sender {
+//    [self setLabelsForCard: = self.eightOfDiamondsButton];
+//}
+//- (IBAction)tenOfHeartsBotton:(id)sender {
+//    [self setLabelsForCard: = self.tenOfHearts];
+//}
+//- (void) setLabelsForCard:(FISCard *)card {
+//    self.topLeftLabel.text = card.cardLabel;
+//    self.middleLabel.text = card.cardLabel;
+//    self.bottomLabel.text = card.cardLabel;
+//}
 
 @end
